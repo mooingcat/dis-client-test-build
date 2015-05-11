@@ -72,3 +72,4 @@ android {
 }
 
 check.dependsOn 'connectedAndroidTest'
+
