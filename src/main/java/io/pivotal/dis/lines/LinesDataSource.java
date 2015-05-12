@@ -18,7 +18,7 @@ public class LinesDataSource {
     JSONObject response = client.fetchDisruptedLines();
 
     JSONArray disruptions = response.getJSONArray("disruptions");
-    List<Line> lines = new ArrayList<>();
+    List<Line> lines = new ArrayList<Line>();
     for (int i = 0; i < disruptions.length(); i++) {
       lines.add(new Line(disruptions.getJSONObject(i).getString("line"), disruptions.getJSONObject(i).getString("status")));
     }

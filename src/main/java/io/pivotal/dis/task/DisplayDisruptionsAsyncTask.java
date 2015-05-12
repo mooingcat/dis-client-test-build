@@ -41,9 +41,9 @@ public class DisplayDisruptionsAsyncTask extends AsyncTask<Void, Void, List<Map<
   protected List<Map<String, String>> doInBackground(Void... params) {
     try {
       List<Line> disruptedLines = linesDataSource.getDisruptedLines();
-      List<Map<String, String>> disruptedLinesForDisplay = new ArrayList<>();
+      List<Map<String, String>> disruptedLinesForDisplay = new ArrayList<Map<String, String>>();
       for (Line line : disruptedLines) {
-        Map<String, String> map = new HashMap<>();
+        Map<String, String> map = new HashMap<String, String>();
         map.put("name", line.getName());
         map.put("status", line.getStatus());
         disruptedLinesForDisplay.add(map);
